@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Innovations</title>
+   <style>  
+   
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        color: #333;
+        width: 83em;
+        position: fixed;
+      }
+      
+      header {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+      
+      section {
+        max-width: 800px;
+        margin: 2em auto;
+        padding: 1em;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 0.5em;
+      }
+      
+      input,
+      select,
+      button {
+        margin-bottom: 1em;
+      }
+      
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+    
+   </style>
+</head>
+
+<body>
+  <header>
+    <h1>Healthcare Innovations</h1>
+    <p>Empowering Health and Well-Being</p>
+  </header>
+
+  <section id="data-collection">
+    <h2>Data Collection</h2>
+    <form id="health-form">
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" name="weight" placeholder="Enter your weight (kg)" required>
+
+      <label for="exercise">Weekly Exercise:</label>
+      <select id="exercise" name="exercise" required>
+        <option value="none">Select exercise frequency</option>
+        <option value="low">Low</option>
+        <option value="moderate">Moderate</option>
+        <option value="high">High</option>
+      </select>
+
+      <button type="button" onclick="collectHealthData()">Submit</button>
+    </form>
+  </section>
+
+  <section id="data-analysis">
+    <h2>Data Analysis</h2>
+    <div id="analysis-result"></div>
+  </section>
+
+  <script >function collectHealthData() {
+    const weight = document.getElementById('weight').value;
+    const exercise = document.getElementById('exercise').value;
+  
+    // Simulate sending data to a server (in a real application, this would be an AJAX request)
+    sendDataToServer({ weight, exercise });
+  
+    // Display a message or update UI indicating successful data collection
+    alert('Health data collected successfully!');
+  
+    // Perform data analysis (simulated)
+    analyzeHealthData(weight, exercise);
+  }
+  
+  function sendDataToServer(data) {
+    // In a real application, you would send the data to a server using AJAX or a similar method
+    console.log('Sending data to server:', data);
+  }
+  
+  function analyzeHealthData(weight, exercise) {
+    // Simulated data analysis
+    const analysisResult = `Based on your weight (${weight} kg) and exercise frequency (${exercise}), here is your analysis result.`;
+  
+    // Display the analysis result on the page
+    document.getElementById('analysis-result').innerText = analysisResult;
+  }
+  </script>
+</body>
+
+</html>

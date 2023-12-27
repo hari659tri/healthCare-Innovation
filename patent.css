@@ -1,0 +1,241 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(38 97 255);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: rgba(240, 243, 252, 0.8);
+    color: #333;
+  }
+  
+  .prescription {
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+  }
+  
+  .prescription p {
+    margin-bottom: 10px;
+  }
+  
+  .prescription .sign {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+  
+  .history-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease;
+    display: none;
+  }
+  
+  .history-popup.active {
+    display: block;
+  }
+  
+  .registration-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease;
+    display: none;
+  }
+.form-scroll {
+  max-height: 600px;
+  overflow-y: auto;
+}
+  .registration-popup.active {
+    display: block;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.health-test-report-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease;
+    display: none;
+  }
+  
+  .health-test-report-popup.active {
+    display: block;
+  }
+  
+  .photo-gallery {
+    display: flex;
+  }
+  
+  .gallery-item {
+    flex: 1;
+    max-width: 300px; /* You can adjust this value to set the desired width */
+    max-height: 200px; /* You can adjust this value to set the desired height */
+    margin: 10px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .logo {
+        text-align: center;
+      }
+  
+       .logo-text {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      /* Style for the first letter 'H' */
+      .logo-text span {
+        font-size: 48px; /* Larger size for the first letter */
+        color: rgb(15, 190, 15); /* Color for the first letter 'H' */
+      }
+  
+  .chart-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease;
+    display: none;
+  }
+  
+  .chart-popup.active {
+    display: block;
+  }
+  
+  .chart-popup table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .chart-popup th,
+  .chart-popup td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chart-popup th {
+    background-color: #f2f2f2;
+  }
+  
+  .chart-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .chart-popup .close-btn:hover {
+    background-color: #999;
+  }
+  
+  .watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      font-weight: bold;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  
+  
